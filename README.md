@@ -7,8 +7,10 @@ Usually a begining programmer is working by themselves, either through solo-cour
 
 I''ll acknowlesge that both of these reasources can be intimidating (or downright hostile) to newbies, I think the bigger detriments come in how the answers are couched. Overall, I believe these formats both make it difficult for a beginner (or anyone, for that matter) to understand the quality and/or design decisions of a given answer. Some common issues as I see them are: 
  1) only one answer to a problem is provided 
+ 
    (which doesn't show a spectrum of answers and makes coding seem like any answer outside of this is invalid) 
  2) the reasoning behind the coding decisions is left out 
+    
     (this is largely unintentional, it just takes a lot of time to explain. Still, this is useful context if you are below  the skill-level of the answer-writer) 
  3) when there *are* multiple answers, it can be difficult to determine which answer is better than which and why. 
 
