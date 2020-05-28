@@ -74,9 +74,10 @@ In order to explain *why* this code is a great solution,  I've written some alte
 
 ### Calculating Every Possible Sum 
 
-An easy mistake to make in coding, especially when you're new, is to take the problem statement at face-value. If we want the highest and lowest sums possible  after removing one element, I should calulate the sum of each possible solution, and keep the highest and lowest results. 
+An easy mistake to make in coding, especially when you're new, is to take the problem statement at face-value. If we want the highest and lowest sums possible  after removing one element, I should calulate the sum of each possible solution, and keep the highest and lowest results, right? 
 
-In order to accomplish this, one would have to create initial `min_sum`s and `max_sum` by summing without any one given element, create every possible sum, and run comparisons to find the real `min_sum` and `max_sum`.  The code would look something like this: 
+
+While we'll swing back to why this is a bad approach momentarily, let's first cover the underlying logic. In order to accomplish this, one would have to create initial `min_sum`s and `max_sum` by summing without any one given element, create every possible sum, and run comparisons to find the real `min_sum` and `max_sum`.  The code would look something like this: 
 
 ```python
 #  Alt Solution: Every possible sum
