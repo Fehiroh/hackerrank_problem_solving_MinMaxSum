@@ -35,6 +35,8 @@ The following is a solution to https://www.hackerrank.com/challenges/mini-max-su
 ![alt text](https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/mini-max-sum-English.jpg "The Problem Statement")
 
 # The Solution 
+Immediately below, I've written both the logic and the code for my solution. This is an approximation of how a solution would be given in either of the usual reasources. If you don't understand what's going on, that's okay! I actually spend a lot of time later building up the reasoning behind this code before before we look at it again, so just hang tight. 
+
 ## Importing Libraries
 
 ``` python 
