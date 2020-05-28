@@ -5,7 +5,7 @@ Squeezing a little more speed out of your code can be extremely important, espec
 
 Usually a begining programmer is working by themselves, either through solo-coursework, or through self-taught delving into various projects. And, let's be honest, nobody started great at this. As a result, a new programmer is normally exposed to only their own code, and it's not very good. This exposure to only bad code is further exacerbated by the fact that more collaborative endevours such as code review, working on opensource projects, or developing code for research applications is something beyond the skillset of a beginner. This means that the average novice coder only sees code that they've written, or which they've accessed through textbooks / forums such as StackOverflow. 
 
-I''ll acknowlesge that both of these reasources can be intimidating (or downright hostile) to newbies, I think the bigger detriments come in how the answers are couched. Overall, I believe these formats both make it difficult for a beginner (or anyone, for that matter) to understand the quality and/or design decisions of a given answer. Some common issues as I see them are:  
+I''ll acknowledge that both of these reasources can be intimidating (or downright hostile) to newbies, I think the bigger detriments come in how the answers are couched. Overall, I believe these formats both make it difficult for a beginner (or anyone, for that matter) to understand the quality and/or design decisions of a given answer. Some common issues as I see them are:  
 
  **1) Singular Answer** 
  
