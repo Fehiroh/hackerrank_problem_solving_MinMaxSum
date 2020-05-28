@@ -95,11 +95,11 @@ def miniMaxSum(arr):
     print(min_sum, max_sum)
 ```
 
-The primary reason that this is also a really bad solution, though *much* better than the first alternate, is that sorts don't scale well; regardless of sorting algorithm, any sort will require every element within a set to be compared against multiple elements. The absolute lowest number of checks would be one, but that's with a set that only has two elements. As you increase the length of `arr`, more and more comparisons are required, and the sort time will generally increases non-linearly. This can be a worthwhile trade-off if you do infact need the entire sorted list. However, since we would immediately discard everything except the min and max, it makes more sense to only ever compare against these values. 
+This is a *much* better than the first alternate, but it is ultimately still extremely bad. The two reasons for this are that 1) a full sort is unnecessary, and 2) sorts don't scale well; regardless of sorting algorithm, any sort will require every element within a set to be compared against multiple elements. The absolute lowest number of checks would be one, but that's with a set that only has two elements. As you increase the length of `arr`, more and more comparisons are required, and the sort time will generally increases non-linearly. This can be a worthwhile trade-off if you do infact need the entire sorted list. However, since we would immediately discard everything except the min and max, it makes more sense to only ever compare against these values. 
 
 ### `Min()` and ` Max()`
 
-Anyone who has included `min()` and `max()` into their solution truly understands the problem. This code is clean, easy to read, and will return values exponentially faster than the previous solutions. I've included two versions of this solution, one is fewer lines, but harder to read quickly, while the other is more pythonic. Remember, while throwing a nice one-liner can be a big dopamine hit, writing longer/more-pythonic code with well-named variables means your work will be easier to read, share, expand, and maintain. And even the two-liner doesn't double up work by calculating the sum twice to turn it into a one-liner. 
+The observation that we only really need the min and the max is the corner-stone of our next solution. Anyone who has included `min()` and `max()` into their solution truly understands the problem, whether or not they understand the underlying binary iteration that makes those functions run so quickly.  This code is clean, easy to read, and will return values exponentially faster than the previous solutions. I've included two versions of this solution, one is fewer lines, but harder to read quickly, while the other is more pythonic. Remember, while throwing a nice one-liner can be a big dopamine hit, writing longer/more-pythonic code with well-named variables means your work will be easier to read, share, expand, and maintain. OOP obviously comes into the discussion too, at this point, but I'm planning to cover that in another repo. Regardless, even if you are going for short code since you only care about one thing in the local scope, nobody is impressed by code that repeats itself while trying to look concis; the two-liner is a two-liner because it doesn't double up work by calculating the sum twice. 
 
 
 #### Two-liner Min/Max
@@ -122,6 +122,42 @@ def miniMaxSum(arr):
     print(min_sum, max_sum)
 ```
 
-Overall, both of these solutions are easier to read, and scale linearly, which makes them exponentially better than the previous solutions. However, there is still some slight tweaking possible, inthat making use of `min()` and `max()` requires two iterations through `arr`, wehere as the inital solution does not. 
+Overall, both of these solutions are easier to read, and scale linearly, which makes them exponentially better than the previous solutions. However, there is still some slight tweaking possible. The most obvious one (to me, at least) is that making use of `min()` and `max()` requires two iterations through `arr`. Let's return to the optimal solution to see how it reduces the amount of iterations to 1. 
 
+### Returning to the Solution 
+
+While understanding how `min()` and `max()` work wasn't necessary before, it is now. Each of these functions essential work as a for-if. By switching out the `min()` and `max()` for an if/elif, only one iteraction through arr is necessary. Instead of every element going through two binary conditionals, many will only go through one. Additionally, by starting the range within the for-loop at 1, we bypass an unnecessisary comparison of the first element to itself. This is largely unnecesary in this particular excercise, but will make the function ever so slightly better than someone who did not include this detail. 
+
+```python
+#   Solution 
+def miniMaxSum(arr):
+    init_sum = sum(arr)
+    min_val, max_val = arr[0]
+    for i in range(1, len(arr)):
+        if arr[i] < min_val:
+            min_val = arr[i]
+        elif arr[i] > max_val:
+            max_val = arr[i]
+    min_sum = init_sum - max_val
+    max_sum = init_sum - min_val 
+    print(min_sum, max_sum)
+
+
+# Execution
+if __name__ == '__main__':
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
+```
+
+# Conclusion
+
+Based on all these solutions, I hope you've come away with a few simple lessons about how to tackle coding problems and refactoring: 
+    1. Understand your Problem (inputs, outputs)
+    2. Determine the knowledge required to derive the output from your input. 
+    3. Find the way to determine that knowledge by using:
+        a) the smallest possible subset of the original input.
+        b) the fewest comparisons 
+        c) the fewest number of iteractions. 
+    4. As always, document your code and strive for readability. 
 
