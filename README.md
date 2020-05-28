@@ -12,7 +12,7 @@ Because of this, I've decided to put together a case-study to help coders that a
 
 The following is a solution to https://www.hackerrank.com/challenges/mini-max-sum/problem, in which a Python script must return the minimum and maximum possible values that can be created by summing the values of a list after removing any one element. This must also be done as quickly as possible, which means that the solution must account for scaling.  A full summary of the problem (and an example answer) can be found below.
 
-![alt text](https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/mini-max-sum-English.jpg "Logo Title Text 1")
+![alt text](https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/mini-max-sum-English.jpg "The Problem Statement")
 
 # The Solution 
 ## Importing Libraries
