@@ -6,10 +6,12 @@ Squeezing a little more speed out of your code can be extremely important, espec
 Usually a begining programmer is working by themselves, either through solo-coursework, or through self-taught delving into various projects. And, let's be honest, nobody started great at this. As a result, a new programmer is normally exposed to only their own code, and it's not very good. This exposure to only bad code is further exacerbated by the fact that more collaborative endevours such as code review, working on opensource projects, or developing code for research applications is something beyond the skillset of a beginner. This means that the average novice coder only sees code that they've written, or which they've accessed through textbooks / forums such as StackOverflow. This can be less than pleasant. 
 
 <p align="center">
-  <width="300" height="200", img src="https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/stackoverflow.jpg" alt="Accurate"/>
+  <img src="https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/stackoverflow.jpg" style="width:200px;height:200px;" alt="Accurate" />
 </p>
 
-Jokes aside, both of these reasources can be intimidating (or downright hostile) to newbies. However, I think the bigger detriments come in how the answers are couched. Overall, I believe these formats both make it difficult for a beginner (or anyone, for that matter) to understand the quality and/or design decisions of a given answer. Some common issues as I see them are:  
+Jokes aside, both of these reasources can be intimidating (or downright hostile) to newbies. However, I think the bigger detriments come in how the answers are couched, which obscure or fail to provide indications of quality and/or design decisions. At least as far as a beginner can tell. 
+
+Some common issues as I see them are:  
 
  **1) Singular Answer** 
  
@@ -192,4 +194,8 @@ Based on all these solutions, I hope you've come away with a few simple lessons 
   * the fewest comparisons.  
   * the fewest number of iteractions. 
 4. As always, document your code and strive for readability. 
+
+<p align="center">
+  <img src="https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/comment.jpg" alt="You"/>
+</p>
 
