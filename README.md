@@ -168,8 +168,8 @@ Based on all these solutions, I hope you've come away with a few simple lessons 
 1. Understand your Problem (inputs, outputs) 
 2. Determine the knowledge required to derive the output from your input.  
 3. Find the way to determine that knowledge by using: 
-  a) the smallest possible subset of the original input.
-  b) the fewest comparisons.  
-  c) the fewest number of iteractions. 
+  * the smallest possible subset of the original input.
+  * the fewest comparisons.  
+  * the fewest number of iteractions. 
 4. As always, document your code and strive for readability. 
 
