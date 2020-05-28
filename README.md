@@ -9,7 +9,7 @@ I''ll acknowlesge that both of these reasources can be intimidating (or downrigh
 
  **1) Singular Answer** 
  
-  Whne only one answer to a problem is provided, there isn't a multitude of viewpoints to consider. This leaves the beginer pretty much where they started, and can potentially make it seem as though there is only one way to approach each problem. 
+  When only one answer to a problem is provided, there isn't a multitude of viewpoints to consider. This leaves the beginer pretty much where they started, and can potentially make it seem as though there is only one way to approach each problem. 
  
  **2) No Shown Work** 
     
@@ -17,7 +17,7 @@ I''ll acknowlesge that both of these reasources can be intimidating (or downrigh
     
  **3) Unclear Qaulity** 
  
-   When there *are* multiple answers, it can be difficult to determine which answer is better than which and why.
+   When there *are* multiple answers, it can be difficult to determine which answer is better than which and why. This can lead to adopting bad habits/methods. 
 
 Because of this, I've decided to put together a case-study to help coders that are just entering into the art of refactoring understand how to go about writing better code. To do this, I present a problem and my solution, and then show several potential alternate solutions in order of least to most effective. By including a full spectrum of solutions in order, with rationale and critiques, my hope is that the reader can take away some key points about how to write better code. 
 
