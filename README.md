@@ -1,8 +1,17 @@
-# Solving the Minimum and Maximum Sums Within a List with One Removed Element
+# A Case-study in Optimization: Designing a Function to Return the Minimum and Maximum Sums of a List with One Removed Element
+
+# Introduction 
+Squeezing a little more speed out of your code can be extremely important, especially when dealing with Big Data, which is becoming increasing prevalent in the Tech sector. In order to go about making better code, one has to experience code across the the entire spectrum of quality, from the very worst way to accomplish something, to the very best. Unfortunately, it can be difficult for begining programmers to do this, which is why I wrote an article that 
+
+Usually a begining programmer is working by themselves, either through solo-coursework, or through self-taught delving into various projects. And, let's be honest, nobody started great at this, which means you're normally just exposed to your code, and it's not very good. This exposure to only bad code is further exacerbated by the fact that more collaborative endevours such as code review, working on opensource projects, or developing code for research applications is something beyond the skillset of a beginner. This means that the average novice coder only sees code that they've written, or which they've accessed through textbooks / forums such as StackOverflow. Now while both of these can be intimidating or downright hostile to newbies, I think the bigger detriments come in how the answers are couched, which makes it difficult to see the quality or understand the design decisions. Some common issues as I see them are that 1) only one answer to a problem is provided (which doesn't show a spectrum of answers and makes coding seem like any answer outside of this is invalid), 2) the reasoning behind the coding decisions is left out(this is largely unintentional, it just takes a lot of time to explain. Still, this is useful context if you are below  the skill-level of the answer-writer), or 3) when there *are* multiple answers, it can be difficult to determine which answer is better than which and why. 
+
+Because of this, I've decided to put together a case-study to help coders that are just entering into the art of refactoring understand how to go about writing better code. To do this,  I present a problem and my solution, and then show several potential alternate solutions in order of least to most effective. By including a full spectrum in order, eith rationale, and critiques, my hope is that the reader can take away some key points about how to write better code. 
+
+
+# The Problem
 
 The following is a solution to https://www.hackerrank.com/challenges/mini-max-sum/problem, in which a Python script must return the minimum and maximum possible values that can be created by summing the values of a list after removing any one element. This must also be done as quickly as possible, which means that the solution must account for scaling.  A full summary of the problem (and an example answer) can be found below.
 
-# The Problem
 ![alt text](https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/mini-max-sum-English.jpg "Logo Title Text 1")
 
 # The Solution 
