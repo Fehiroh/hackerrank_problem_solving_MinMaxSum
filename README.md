@@ -15,7 +15,7 @@ Some common issues as I see them are:
 
 **1) Singular Answer** 
 > 
->  When only one answer to a problem is provided, there isn't a multitude of viewpoints to consider. This leaves the beginer > pretty much where they started, and can potentially make it seem as though there is only one way to approach each problem. 
+>  When only one answer to a problem is provided, there isn't a multitude of viewpoints to consider. This leaves the beginner  pretty much where they started, and can potentially make it seem as though there is only one way to approach each problem. 
  
  **2) No Shown Work** 
 >    
