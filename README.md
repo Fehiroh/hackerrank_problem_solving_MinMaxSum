@@ -15,7 +15,7 @@ Some common issues as I see them are:
 
 **1) Singular Answer** 
 > 
->  When only one answer to a problem is provided, there isn't a multitude of viewpoints to consider. This leaves the beginner  pretty much where they started, and can potentially make it seem as though there is only one way to approach each problem. 
+>  When only one answer to a problem is provided, it can potentially make it seem as though there is only one way to approach each problem. This is not the case. 
  
  **2) No Shown Work** 
 >    
@@ -25,17 +25,17 @@ Some common issues as I see them are:
 > 
 >   When there *are* multiple answers, it can be difficult to determine which answer is better than which and why. This can lead to adopting bad habits/methods. 
 
-Because of this, I've decided to put together a case-study to help coders that are just entering into the art of refactoring understand how to go about writing better code. To do this, I present a problem and my solution, and then show several potential alternate solutions in order of least to most effective. By including a full spectrum of solutions in order, with rationale and critiques, my hope is that the reader can take away some key points about how to write better code. 
+Because of this, I have decided to put together a case-study to help coders that are just entering into the art of refactoring understand how to go about writing better code. To do this, I present a problem and my solution, and then show several potential alternate solutions in order of least to most effective. By including a full spectrum of solutions in order, with rationale and critiques, my hope is that the reader can take away some key points about how to write better code.
 
 
 # The Problem
 
-The following is a solution to https://www.hackerrank.com/challenges/mini-max-sum/problem, in which a Python script must return the minimum and maximum possible values that can be created by summing the values of a list after removing any one element. While the problem itself states that there are only five list elements, I've chosen to write a solution that acccounts for scaling.  A full summary of the problem (and an example answer) can be found below.
-
+The following is a solution to https://www.hackerrank.com/challenges/mini-max-sum/problem, in which a Python script must return the minimum and maximum possible values that can be created by summing the values of a list after removing any one element. While the problem itself states that there are only five list elements, I have chosen to write a solution that accounts for scaling. A full summary of the problem (and an example answer) can be found below.
 ![alt text](https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/mini-max-sum-English.jpg "The Problem Statement")
 
 # The Solution 
-Immediately below, I've written both the logic and the code for my solution. This is an approximation of how a solution would be given in either of the usual reasources. If you don't understand what's going on, that's okay! I actually spend a lot of time later building up the reasoning behind this code before before we look at it again, so just hang tight. 
+Immediately below, I have written both the logic and the code for my solution. This approximates how a solution would be given in either of the usual resources. If you do not understand what is going on, that is okay! I spend a lot of time later building up the reasoning behind this code before we look at it again, so just hang tight.  
+
 
 ## Importing Libraries
 
@@ -47,9 +47,9 @@ import re
 import sys
 ```
 ## Defining the Function
-While the minimum and maximum possible sums of `arr` are what we are ultimately after, running through each possible sum is unneccessary. Instead, it's much more efficient to calculate the initial sum (`init_sum`), find the maximum and minimum values (`min_val` and `max_val`) within the list, and substract each from the initial sum.
+While the minimum and maximum possible sums of `arr` are what we are ultimately after, running through each possible sum is unnecessary. Instead, it's much more efficient to calculate the initial sum (`init_sum`), find the maximum and minimum values (`min_val` and `max_val`) within the list, and substract each from the initial sum.
 
-In order to do this, we need an initial comparitor for, which we obtain by assigning the value of the first element to two variables, `min_val` and `max_val`. Next, we cycle through each element of `arr` via index, overwriting `min_val` and `max_val` as appropriate. Finally, we print the answer. 
+In order to do this, we need an initial comparator, which we obtain by assigning the value of the first element to two variables, `min_val` and `max_val`. Next, we cycle through each element of `arr` via index, overwriting `min_val` and `max_val` as appropriate. Finally, we print the answer. 
 
 ```python
 #   Solution 
@@ -77,12 +77,12 @@ if __name__ == '__main__':
 
 ## Alternate Code
 
-In order to explain *why* this code is a great solution,  I've written some alternate snippets of code that solve the problem in several less efficient ways. I've included them below, and will go through how their logic works, and how they compare to the original solution. They are arranged according to efficiency, with the least efficient at the top and the most efficient at the bottom. 
+In order to explain *why* this code is a great solution, I’ve written some alternate snippets of code that solve the problem in several less efficient ways. I have included them below, and will go through how their logic works, and how they compare to the original solution. They are arranged according to efficiency, with the least efficient at the top and the most efficient at the bottom.
 
 
 ### Calculating Every Possible Sum 
 
-An easy mistake to make in coding, especially when you're new, is to take the problem statement at face-value. If we want the highest and lowest sums possible  after removing one element, I should calulate the sum of each possible solution, and keep the highest and lowest results, right? 
+An easy mistake to make in coding, especially when you are new, is to take the problem statement at face-value. If we want the highest and lowest sums possible after removing one element, I should calculate the sum of each possible solution, and keep the highest and lowest results, right?
 
 <p align="center">
   <img src="https://github.com/Fehiroh/hackerrank_problem_solving_MinMaxSum/blob/master/cox_wrong.gif" alt="The Only Response"/>
@@ -111,8 +111,7 @@ def miniMaxSum(arr):
     print(min_sum, max_sum)
 ```
 
-
-While understandable, this is a *terrible* way to go about solving this problem. Firstly, the code is longer and harder to read than the "optimal" solution, but it also requires every element to be run through a `sum()` function `len(arr)` times, and the entire array to be duplicated `len(arr)` times. When you are dealing with data structures that contain observations in the millions or billions, this function would take hours to run. It is particularily worth noting that  none of the other solutions require an `x.copy()`, whereas this solution does. As a result, a significant portion of run-time is 100% unnecessary if you successfully reframe the problem. In fact, this failure to reframe is what makes this solution somewhat unbelievable, since the implementation requires one to possess enough coding accumen they would likely fall into an easier trap, such as using `x.sort()`. This is the kind of code that emerges when people are capable of breaking down a problem, but rely much too heavily on pasting in code snippets from forums such as StackOverflow. There's nothing wrong with borrowing chunks when you start out or understand how/why the answers work, but it can lead to creating the worst possible solution. 
+While understandable, this is a *terrible* way to go about solving this problem. Firstly, the code is longer and harder to read than the "optimal" solution, but it also requires every element to be run through a `sum()` function `len(arr)` times, and the entire array to be duplicated `len(arr)` times. When you are dealing with data structures that contain observations in the millions or billions, this function would take hours to run. It is particularly worth noting that none of the other solutions require an `x.copy()`, whereas this solution does. As a result, a significant portion of run-time is 100% unnecessary if you successfully reframe the problem. In fact, this failure to reframe is what makes this solution somewhat unbelievable, since the implementation requires one to possess enough coding acumen they would likely fall into an easier trap, such as using `x.sort()`. This is the kind of code that emerges when people can break down a problem but rely much too heavily on pasting in code snippets from forums such as StackOverflow. There is nothing wrong with borrowing chunks when you start out or understand how/why the answers work, but it can lead to creating the worst possible solution.
 
 ### Using an `x.sort()`
 
@@ -134,7 +133,7 @@ This is a *much* better than the first alternate, but it is ultimately still ext
 
 ### `Min()` and ` Max()`
 
-The observation that we only really need the min and the max is the corner-stone of our next solution. Anyone who has included `min()` and `max()` into their solution truly understands the problem, whether or not they understand the underlying binary iteration that makes those functions run so quickly.  This code is clean, easy to read, and will return values exponentially faster than the previous solutions. I've included two versions of this solution, one is fewer lines, but harder to read quickly, while the other is more pythonic. Remember, while throwing a nice one-liner can be a big dopamine hit, writing longer/more-pythonic code with well-named variables means your work will be easier to read, share, expand, and maintain. OOP obviously comes into the discussion too, at this point, but I'm planning to cover that in another repo. Regardless, even if you are going for short code since you only care about one thing in the local scope, nobody is impressed by code that repeats itself while trying to look concis; the two-liner is a two-liner because it doesn't double up work by calculating the sum twice. 
+The observation that we only really need the min and the max is the corner-stone of our next solution. Anyone who has included `min()` and `max()` into their solution truly understands the problem, whether or not they understand the underlying binary iteration that makes those functions run so quickly.  This code is clean, easy to read, and will return values exponentially faster than the previous solutions. I've included two versions of this solution, one is fewer lines, but harder to read quickly, while the other is more pythonic. Remember, while throwing a nice one-liner can be a big dopamine hit, writing longer/more-pythonic code with well-named variables means your work will be easier to read, share, expand, and maintain. OOP obviously comes into the discussion too, at this point, but I'm planning to cover that in another repo. Regardless, even if you are going for short code since you only care about one thing in the local scope, nobody is impressed by code that repeats itself while trying to look concise; the two-liner is a two-liner because it doesn't double up work by calculating the sum twice. 
 
 
 #### Two-liner Min/Max
